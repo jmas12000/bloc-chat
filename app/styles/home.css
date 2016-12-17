@@ -1,0 +1,124 @@
+html {
+    font-size : 100%;
+    font-family: 'Playfair Display', serif;    
+}
+
+body {
+    background: rgb(20, 25, 34);
+}
+
+.row.chat-area {
+    height: 700px;
+    width: 100%;
+    position: relative; 
+}
+
+.left-nav {
+    height:100%;
+    width: 20%;
+    background: rgb(20, 25, 34);
+}
+
+.heading {
+    color:wheat;
+    height: 40px;
+    text-shadow: 1px 0px 0px lightGrey;      
+}
+
+.logo {
+    font-size: 2.2em;
+    margin-top:9px;   
+}
+
+.room-title {
+    margin-top: -43px;
+    font-size: 2.2em;
+}
+.room-list {
+    list-style-type: none;
+    margin-bottom: -25px;
+    
+}
+
+.room-nav {
+    color:red;
+    text-shadow: 1px 0px 0px lightGrey;
+    font-size: 1.5rem; 
+    margin-top: 25px; 
+    z-index: 1; 
+    margin-left: -5px;
+}
+
+.message-box {
+    width: 65%;
+    height: 89.5%;
+    margin-right: -100px;
+    background-color: whitesmoke;    
+}
+
+.text-box-container {
+    background-color: #555;
+    color: white;
+    width: 80.5%;
+    margin-right:10px;  
+    margin-top: -74.75px;
+    height: 102%;
+    background: rgb(20, 25, 34);  
+}
+
+.text-box {
+    margin-top: 15px;   
+}
+
+.btn-default {
+    padding: 5px 5px 6px 5px ;
+    margin: 15px -30px 15px 10px;   
+}
+
+.btn-default:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .message-box {
+        width: 83%;
+    } 
+}
+
+@media (max-width: 510px)  {
+    .text {
+        padding-left: -2px;
+    } 
+     
+    .room-title {
+        margin-left:70px;
+        padding-left: 10px;
+        margin-bottom: -5px;
+        font-size:1.5em;
+        padding-top: 10px;  
+    }
+    
+    .logo {
+        margin-left: -10;
+        font-size:1.5em;
+        padding-top: 8px;
+    }
+    
+     .message-box {
+        width:70%;   
+    } 
+    .room-nav {
+        margin-left: -25px;
+        font-size: 1em;
+    }
+}
+ 
+@media (max-width: 800px){
+    .message-box {
+        width: 83.75%;  
+    }
+}
+
+
+
+

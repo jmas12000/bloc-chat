@@ -1,1 +1,34 @@
-<h1>Home Page</h1>
+    <div class= "heading container-fluid">
+        <h1 class= "logo text-left">Bloc Chat</h1>
+        <h1 class= "room-title text-center" >Home</h1>   
+    </div>
+    <div class= "container-fluid">
+        <div class= "row chat-area">
+            <div class= "left-nav col-xs-8 ">
+                <ul class= "room-list">
+                    <li class= "room-nav" ng-repeat= "room in rooms" >{{room}}</li> 
+                </ul>
+            </div>
+            <div class= "message-box col-xs-4 ">
+                <tr class= "message-row">
+                    <td class= "message">{{}}</td><br>
+                    <td class= "message-response">{{}}</td><br>
+                    <td class= "message-time">{{}}</td><br>
+                </tr>
+            </div>
+        </div>
+    </div>
+    <div class= "container-fluid text-box-container">
+        <form role= "form ">
+            <div class= "form-group text-container">
+                <div class= "text-box col-xs-8 col-sm-9">
+                    <textarea class= "form-control text" rows= "1" required placeholder= "Go ahead and give it a try">
+                    </textarea>
+                </div>
+                <button type= "submit" class= "btn-default btn-success">Submit</button>
+            </div> 
+        </form>
+    </div>           
+     
+
+
