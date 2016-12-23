@@ -1,34 +1,46 @@
-    <div class= "heading container-fluid">
-        <h1 class= "logo text-left">Bloc Chat</h1>
-        <h1 class= "room-title text-center" >Home</h1>   
-    </div>
+<div class= "main-page" >
     <div class= "container-fluid">
         <div class= "row chat-area">
+            <div class= "heading container-fluid">
+                <h1 class= "logo text-center">Bloc Chat</h1>
+                  
+           </div>
             <div class= "left-nav col-xs-8 ">
-                <ul class= "room-list">
-                    <li class= "room-nav" ng-repeat= "room in rooms" >{{room}}</li> 
-                </ul>
+                <div class= "room-list-container">
+                    <button class= "btn btn-warning btn-md room-create myButton text-center"  
+                         ng-click= "home.modalOpen()" >Create room</button>
+                    <ul class= "room-list">
+                        <li class= "room-nav" ng-repeat= "room in home.rooms" >
+                            <button type= "button" class= "btn  btn-md room-enter text-center btn-info active">{{room.name}}</button>
+                        </li> 
+                    </ul>
+                </div>
             </div>
-            <div class= "message-box col-xs-4 ">
-                <tr class= "message-row">
-                    <td class= "message">{{}}</td><br>
-                    <td class= "message-response">{{}}</td><br>
-                    <td class= "message-time">{{}}</td><br>
-                </tr>
+            <div class= "container col-xs-4 ">
+                <div class= "message-overlay" >
+                    <tr class= "message-row">
+                        <td class= "message">{{}}</td><br>
+                        <td class= "message-response">{{}}</td><br>
+                        <td class= "message-time">{{}}</td><br>  
+                    </tr>
+                </div>
+                <div class= "message-base">
+                </div>
+            </div>
+            <div class= "right-nav">
+            </div>
+            <div class= " text-box-container ">
+                <form role= "form ">
+                    <div class= "form-group text-container">
+                        <div class= "text-box col-xs-8 col-sm-9">
+                            <textarea class= "form-control text" rows= "1"  placeholder= "Go ahead and give it a try">
+                            </textarea>
+                        </div>
+                        <button type= "submit" class= "btn-default btn-success">Submit</button>  
+                    </div> 
+                </form>
             </div>
         </div>
-    </div>
-    <div class= "container-fluid text-box-container">
-        <form role= "form ">
-            <div class= "form-group text-container">
-                <div class= "text-box col-xs-8 col-sm-9">
-                    <textarea class= "form-control text" rows= "1" required placeholder= "Go ahead and give it a try">
-                    </textarea>
-                </div>
-                <button type= "submit" class= "btn-default btn-success">Submit</button>
-            </div> 
-        </form>
-    </div>           
-     
-
+    </div>    
+</div>
 
