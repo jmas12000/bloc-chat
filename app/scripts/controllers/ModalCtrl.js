@@ -1,25 +1,24 @@
-
 (function() {
     function ModalCtrl($uibModalInstance, $scope, Room) {
         
-       $scope.create=function(addRoom) {
+       $scope.create = function() {
+            var roomToAdd=$scope.newRoom;
            
-            if ($scope.newRoom) {
-             Room.addRoom($scope.newRoom); 
-             $uibModalInstance.close('Submitted');
+            if (roomToAdd) {
+                Room.addRoom(roomToAdd); 
+                $uibModalInstance.close('Submitted');
     
             }else {
-               $uibModalInstance.close('Error');
-            }  
-            
+                $uibModalInstance.close('Error');
+            }   
         };
+        
         $scope.close = function() {
-            $uibModalInstance.close('Close');
+            $uibModalInstance.close('Closed');
         };
 
-        $scope.cancel = function() { 
-            
-            $uibModalInstance.close('Cancel');
+        $scope.cancel = function() {
+            $uibModalInstance.close('Canceled');
         };
     }
         
@@ -27,4 +26,5 @@
         .module('blocChat')
         .controller('ModalCtrl',[ '$uibModalInstance', '$scope', 'Room', ModalCtrl]);
 })();   
+   
 

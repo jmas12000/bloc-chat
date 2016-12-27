@@ -1,12 +1,10 @@
 body {
-    
-    font-family: 'Playfair Display', serif; 
+
+    font-family: 'Playfair Display', serif;
     background-image: url('http://www.freegreatpicture.com/files/147/12848-high-resolution-color-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-   // background-color: dimgray;
-    background-blend-mode: darken;
-    
+
 }
 
 .main-page {
@@ -20,31 +18,29 @@ body {
     width: 90%;
     margin-left: 10%;
     margin-top: 10px;
-    position: relative; 
+    position: relative;
 }
 
 .heading {
     color:wheat;
     height: 9.25%;
-    text-shadow: 1px 0px 0px lightGrey; 
-    background: rgb(0,0,0);
-    opacity: .5;
+    text-shadow: 1px 0px 0px lightGrey;
     background-image: url('/assets/images/banner-header.jpg');
+    background-color: rgba(2, 222, 222, 0.2);
     border-radius:5px;
 }
 
 .logo {
     font-size: 3em;
-    margin-top:9px;   
+    margin-top:-10px;
 }
 
 .left-nav {
     height:75%;
     width: 20%;
-    
-   // background: rgb(20, 25, 34); 
-    opacity: .9;
+    background-color: rgba(2, 222, 222, 0.1);
 }
+
 .room-nav {
     margin-top: 15px;
 }
@@ -56,41 +52,65 @@ body {
 
 .room-list {
     list-style-type: none;
-    margin-bottom: -25px;  
+    margin-bottom: -25px;
 }
 
 .room-enter {
-    color: red;
-    text-shadow: 1px 0px 0px lightGrey;
-    font-size: 1rem;   
+    color: white;
+    text-shadow: 1px 0px 0px green;
+    font-size: 1rem;
+    margin-top: 15px;
+    min-width: 100px;
+    min-height: 35px;
+    max-height: 35px;
+    max-width: 100px;
+    font-size: 1.2em;
+    background-color: rgba(135,	206,	250, 0.7);
+
+}
+.room-list-container {
+    opacity: 1000;
+}
+.room-create {
+    margin-left: 40px;
+    font-weight:800;
+    margin-top: 20px;
+     z-index: 1001;
+   //font-family: 'Playfair Display', serif;
 }
 
-
-
-
-
-.container {
+.message-container {
     width: 65%;
     height: 75%;
     margin-right: -100px;
-    opacity: .9;
+    //opacity: .5;
     position: relative;
-    background-color: #f0f0f0;
-    border: 3px solid dimgrey; 
+    background-color: rgba(135,	206,	250, 0.3);
+    border: 3px solid dimgrey;
 }
-
-
 
 .message-overlay {
    height: 95%;
     width: 95%;
     position: absolute;
-    z-index: 1; 
+    z-index: 1;
     top: 2.5%;
     left: 2.5%;
     color: red;
     font-size: 40px;
-    border: 3px solid darkgrey;     
+    border: 3px solid darkgrey;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.message-container .message-header-container {
+    height: 40px;
+    line-height: 40px;
+}
+
+.message-header-container h3 {
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -10px;
 }
 
 .message-base {
@@ -102,151 +122,113 @@ body {
     background-image: url("/assets/images/head.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    opacity: .2;
-        
+    opacity: .6;
 }
 
 .right-nav {
     height:75%;
-    width: 15%;
-   //background: rgb(0,0,0);
+    width: 20%;
     margin-left: 85%;
-    opacity: .9;
+    background-color: rgba(2, 222, 222, 0.1);
 }
 
 .text-box-container {
     width: 100%;
     height: 10%;
-   //background: rgb(0,0,0);
-    opacity: .7;
-   
 }
 
 .text-box {
     margin-top: 18px;
     width: 60%;
-    margin-left: 20%;
+    margin-left: 18%;
 }
 
 .btn-default {
     padding: 5px 5px 6px 5px ;
-    margin: 21px 0px 15px 0%;
-    right: 0%;
+    margin: 18px 2px 17px 0px;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.room-enter {
-    margin-top: 15px;
-    min-width: 100px;
-    min-height: 35px;
-    max-height: 35px;
-    max-width: 100px;
-    font-size: 1.2em;
-    
-}
-
-.room-create {
-    margin-left: 40px;
-    font-weight:800;
-    margin-top: 20px;
-    color:black;
-    //font-family: 'Playfair Display', serif;
-    
-}
-
 .myButton {
-	-moz-box-shadow:inset 1px 5px 6px 1px #91b8b3;
-	-webkit-box-shadow:inset 1px 5px 6px 1px #91b8b3;
-	box-shadow:inset 1px 5px 6px 1px #91b8b3;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6e948a), color-stop(1, #6c7c7c));
-	background:-moz-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
-	background:-webkit-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
-	background:-o-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
-	background:-ms-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
-	background:linear-gradient(to bottom, #6e948a 5%, #6c7c7c 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e948a', endColorstr='#6c7c7c',GradientType=0);
-	background-color:#6e948a;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	border:1px solid #4e615b;
-	display:inline-block;
-	cursor:pointer;
-	color:#fff2f6;
-	font-family:Georgia;
-	font-size:15px;
-	font-weight:bold;
-	padding:12px 5px;
-	text-decoration:none;
-	text-shadow:0px -2px 0px #436963;
+	  -moz-box-shadow:inset 1px 5px 6px 1px #91b8b3;
+	     -webkit-box-shadow:inset 1px 5px 6px 1px #91b8b3;
+	  box-shadow:inset 1px 5px 6px 1px #91b8b3;
+	     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6e948a), color-stop(1, #6c7c7c));
+       background:-moz-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
+	     background:-webkit-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
+	  background:-o-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
+	     background:-ms-linear-gradient(top, #6e948a 5%, #6c7c7c 100%);
+	  background:linear-gradient(to bottom, #6e948a 5%, #6c7c7c 100%);
+	  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e948a', endColorstr='#6c7c7c',GradientType=0);
+	  background-color:#6e948a;
+	     -moz-border-radius:5px;
+	     -webkit-border-radius:5px;
+	  border-radius:5px;
+	  border:1px solid #4e615b;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#fff2f6;
+	  font-family:Georgia;
+	  font-size:15px;
+	  font-weight:bold;
+	  padding:12px 5px;
+	  text-decoration:none;
+	  text-shadow:0px -2px 0px #436963;
+    opacity: .9;
 }
+
 .myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #6e948a));
-	background:-moz-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
-	background:-webkit-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
-	background:-o-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
-	background:-ms-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
-	background:linear-gradient(to bottom, #6c7c7c 5%, #6e948a 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#6e948a',GradientType=0);
-	background-color:#6c7c7c;
+	  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #6e948a));
+	  background:-moz-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
+	  background:-webkit-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
+	  background:-o-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
+	  background:-ms-linear-gradient(top, #6c7c7c 5%, #6e948a 100%);
+	  background:linear-gradient(to bottom, #6c7c7c 5%, #6e948a 100%);
+	  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#6e948a',GradientType=0);
+	  background-color:#6c7c7c;
 }
+
 .myButton:active {
-	position:relative;
-	top:1px;
-}
-    
-
-@media screen and (max-width: 1024px) {
-     
+	  position:relative;
+	  top:1px;
 }
 
-@media (max-width: 510px)  {
-    .text {
-        padding-left: -2px;
-    } 
-     
-    .room-title {
-        margin-left:70px;
-        padding-left: 10px;
-        margin-bottom: -5px;
-        font-size:1.5em;
-        padding-top: 10px;  
-    }
-    
-    
-    
-    
-     
-    
-    
-}
-
-
-
-@media (max-width: 800px){
+@media (max-width: 1024px) {
     .room-enter {
         margin-left: -55px;
     }
     .room-create {
         margin-left: -15px;
-       
     }
+}
+
+@media (max-width: 510px)  {
+    .room-title {
+        margin-left:70px;
+        padding-left: 10px;
+        margin-bottom: -5px;
+        font-size:1.5em;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 800px){
     .right-nav {
-       width:0%;
-      
+        width:0%;
     }
     .left-nav {
         width: 30%;
     }
-    .container {
-        width: 70%;
+    .message-container {
+        margin-right: -20px;
     }
     .row.chat-area {
         margin-left: -50px;
-       
     }
-    
+    .btn-default {
+        margin-left: -15px;
+    }
 }

@@ -3,25 +3,30 @@
         <div class= "row chat-area">
             <div class= "heading container-fluid">
                 <h1 class= "logo text-center">Bloc Chat</h1>
-                  
            </div>
             <div class= "left-nav col-xs-8 ">
                 <div class= "room-list-container">
-                    <button class= "btn btn-warning btn-md room-create myButton text-center"  
+                    <button class= "btn btn-warning btn-md room-create myButton text-center"
                          ng-click= "home.modalOpen()" >Create room</button>
                     <ul class= "room-list">
                         <li class= "room-nav" ng-repeat= "room in home.rooms" >
-                            <button type= "button" class= "btn  btn-md room-enter text-center btn-info active">{{room.name}}</button>
-                        </li> 
+
+                            <button type= "button" class= "btn  btn-md room-enter text-center  active"   ng-click= "home.roomSelected(room)" >{{room.name}}</button>
+
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class= "container col-xs-4 ">
+            <div class= "message-container col-xs-4 ">
                 <div class= "message-overlay" >
-                    <tr class= "message-row">
-                        <td class= "message">{{}}</td><br>
-                        <td class= "message-response">{{}}</td><br>
-                        <td class= "message-time">{{}}</td><br>  
+                    <div class= "message-header-container text-center">
+                        <h3 class= "message-header ">{{home.currentRoom.name}}</h3>
+                    </div>
+                    <tr class= "message-row" ng-repeat= "message in home.messages()">
+                      <td class= "message-content">{{message.content}}</td><br>
+                        <!-- <td class= "message-name">{{message}}</td><br>
+                        <td class= "message-content">{{message.content}}</td><br>
+                        <td class= "message-time">{{home.message.sentAt}}</td><br> -->
                     </tr>
                 </div>
                 <div class= "message-base">
@@ -36,11 +41,10 @@
                             <textarea class= "form-control text" rows= "1"  placeholder= "Go ahead and give it a try">
                             </textarea>
                         </div>
-                        <button type= "submit" class= "btn-default btn-success">Submit</button>  
-                    </div> 
+                        <button type= "submit" class= "btn-default btn-success">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
 </div>
-
