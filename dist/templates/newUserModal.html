@@ -1,0 +1,21 @@
+<div class= "modal-container" class="modal fade" id = "newUserModal"role= "dialog">
+    <div class= "modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center"><b>Set a username</b></h4>
+            </div>
+            <form name= "validateForm" class="new-room-form" novalidate >
+                <div class="modal-body">
+                    <div class= "form-group has-success has-feedback text-center">
+                        <label class= "control-label " for= "room-text">This name will appear when you send messages</label>
+                        <input type= "text" name= "validateForm" ng-model= "newUser" class= "form-control "  id = "room-text"  required >
+                        <span class=" form-control-feedback" ></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary center-block" name= "validateForm" ng-click= " validateForm.$valid && userCreate()">Set username</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

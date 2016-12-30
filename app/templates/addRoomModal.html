@@ -5,20 +5,19 @@
                 <button type="button" class="close-modal pull-right" ng-click= "close()">&times;</button>
                 <h4 class="modal-title">Create a new room</h4>
             </div>
-            <form class="new-room-form" >
-                <div class="modal-body">         
+            <form class="new-room-form" novalidate >
+                <div class="modal-body">
                     <div class= "form-group has-success has-feedback">
-                        <label class= "control-label" for= "room-text">Enter a room name</label> 
+                        <label class= "control-label" for= "room-text">Enter a room name</label>
                         <input type= "text"  ng-model= "newRoom" class= "form-control" placeholder= "Enter new room name" id = "room-text" >
                         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning cancel-modal" ng-click= "cancel()">Cancel</button>
-                    <button type="button" class="btn btn-primary create-modal" ng-click= "create()">Create a room</button>
+                    <button type="button" class="btn btn-primary create-modal" ng-click= "roomCreate()">Create a room</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-

@@ -1,18 +1,16 @@
 (function() {
-    function ModalCtrl($uibModalInstance, $scope, Room) {
-        
-       $scope.create = function() {
+    function AddRoomModalCtrl($uibModalInstance, $scope, Room) {
+        $scope.roomCreate = function() {
             var roomToAdd=$scope.newRoom;
-           
+
             if (roomToAdd) {
-                Room.addRoom(roomToAdd); 
+                Room.addRoom(roomToAdd);
                 $uibModalInstance.close('Submitted');
-    
             }else {
                 $uibModalInstance.close('Error');
-            }   
+            }
         };
-        
+
         $scope.close = function() {
             $uibModalInstance.close('Closed');
         };
@@ -21,10 +19,8 @@
             $uibModalInstance.close('Canceled');
         };
     }
-        
+
     angular
         .module('blocChat')
-        .controller('ModalCtrl',[ '$uibModalInstance', '$scope', 'Room', ModalCtrl]);
-})();   
-   
-
+        .controller('AddRoomModalCtrl',['$uibModalInstance', '$scope', 'Room', AddRoomModalCtrl]);
+})();
