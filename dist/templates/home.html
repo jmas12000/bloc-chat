@@ -1,49 +1,44 @@
-<div class= "main-page" >
-    <div class= "container-fluid">
-        <div class= "row chat-area">
-            <div class= "heading container-fluid">
-                <h1 class= "logo text-center">Bloc Chat</h1>
-           </div>
-            <div class= "left-nav col-xs-8 ">
-                <div class= "room-list-container">
-                    <button class= "btn btn-warning btn-md room-create myButton text-center"
-                         ng-click= "home.modalOpen()" >Create room</button>
-                    <ul class= "room-list">
-                        <li class= "room-nav" ng-repeat= "room in home.rooms" >
 
-                            <button type= "button" class= "btn  btn-md room-enter text-center  active"   ng-click= "home.roomSelected(room)" >{{room.name}}</button>
-
-                        </li>
-                    </ul>
-                </div>
+<div class= " main-page container-fluid">
+    <div class= "row-fluid chat-area">
+        <div class= "heading container-fluid">
+            <h1 class= "logo text-center ">Bloc Chat</h1>
+            <div class= "heading-image">
             </div>
-            <div class= "message-container col-xs-4 ">
+        </div>
+        <div class= "left-nav col-xs-5  text-center">
+            <div class= "room-list-container ">
+                <button type= "button" class= "btn btn-block btn-responsive room-create active" ng-click= "home.modalOpen()" >New room</button>
+                <ul class= "room-list text-center">
+                    <li class= "room-nav" ng-repeat= "room in home.rooms" >
+                        <button type= "button" class= "btn  btn-md btn-responsive btn-block active text-center room-enter" ng-click= "home.roomSelected(room)" >{{room.name}}</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class= "message-container  col-xs-7 ">
+            <div class= "message-base">
                 <div class= "message-overlay" >
                     <div class= "message-header-container text-center">
                         <h3 class= "message-header ">{{home.currentRoom.name}}</h3>
                     </div>
-                    <tr class= "message-row" ng-repeat= "message in home.messages()">
-                      <td class= "message-content">{{message.content}}</td><br>
-                        <!-- <td class= "message-name">{{message}}</td><br>
-                        <td class= "message-content">{{message.content}}</td><br>
-                        <td class= "message-time">{{home.message.sentAt}}</td><br> -->
-                    </tr>
-                </div>
-                <div class= "message-base">
-                </div>
-            </div>
-            <div class= "right-nav">
-            </div>
-            <div class= " text-box-container ">
-                <form role= "form ">
-                    <div class= "form-group text-container">
-                        <div class= "text-box col-xs-8 col-sm-9">
-                            <textarea class= "form-control text" rows= "1"  placeholder= "Go ahead and give it a try">
-                            </textarea>
+                    <div class= "message-text-area">
+                        <table class= "table message-body table-striped table-hover" >
+                            <tr ng-repeat= "message in home.messages">
+                                <td class= "message-name col-md-3">{{message.username}}</td><br>
+                                <td class= "message-content col-md-6">{{message.content}}</td>
+                                <td class= "message-time col-md-3">{{message.sentAt }}</td>
+                            </tr>
                         </div>
-                        <button type= "submit" class= "btn-default btn-success">Submit</button>
-                    </div>
-                </form>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class= "text-box-container ">
+            <div class= "text-box col-xs-9 col-sm-6">
+               <textarea class= "form-control text col-xs-8 col-sm-9" rows= "1"  ng-model= "home.newMessage">
+                </textarea>
+                <button type= "submit" class= "btn-default btn-success" ng-click="home.createNewMessage()">Submit</button>
             </div>
         </div>
     </div>
